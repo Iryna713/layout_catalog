@@ -2,12 +2,11 @@
 
 .menu {
   display: grid;
-  grid-template-columns: 90px, 1fr;
   grid-template-rows: 60px;
   grid-template-areas: "icon navigation";
   align-items: center;
   justify-content: space-between;
-  margin: 0 50px;
+  padding: 0 50px;
 
   &__icon {
     width: $iconSize;

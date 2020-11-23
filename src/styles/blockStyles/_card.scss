@@ -3,6 +3,13 @@
 
 .card {
   display: grid;
+  grid-template-areas: "image"
+    "name"
+    "code"
+    "rating"
+    "price"
+    "button";
+  grid-template-rows: 195px 35px 28px 35px 19px 80px;
   width: 200px;
   height: 403px;
   border: 1px solid #f3f3f3;
@@ -10,7 +17,7 @@
   padding: 14px;
 
   &__img {
-    margin: 0 auto 37px;
+    margin: 0 auto;
 
     padding-top: 13px;
     border: 3px solid transparent;
@@ -27,31 +34,27 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
-    margin-bottom: 5px;
   }
 
   &__code {
     @include smallText;
-    margin-bottom: 15px;
   }
 
   &__rate {
     display: grid;
     grid-template-areas: "rate rate";
     justify-content: space-between;
-    margin-bottom: 19px;
   }
 
   &__feedbacks {
     @include smallText;
-    // align-self: center;
+    align-self: baseline;
   }
 
   &__price-block {
     display: grid;
     grid-template-areas: "price price";
     justify-content: space-between;
-    margin-bottom: 20px;
   }
 
   &__price {
@@ -68,6 +71,7 @@
   }
 
   &__buy {
+    grid-area: button;
     align-self: center;
     background-color: $mainColor;
     border: 1px solid transparent;
