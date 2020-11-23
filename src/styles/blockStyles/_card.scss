@@ -17,6 +17,12 @@
   padding: 14px;
 
   &__img {
+    display: grid;
+    // align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 164px;
+
     margin: 0 auto;
 
     padding-top: 13px;
