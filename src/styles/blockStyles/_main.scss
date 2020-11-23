@@ -1,5 +1,5 @@
 .main {
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
@@ -8,19 +8,22 @@
 }
 
 .main__content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-areas: "card card card card"
+    "card card card card";
+  grid-template-columns: repeat(4, 200px);
+  column-gap: 48px;
+  row-gap: 50px;
 }
 
 .page__menu {
   position: relative;
 }
 
-.catalog {
-  width: 1024px;
-}
+// .catalog {
+//   // width: 1024px;
+// }
 
-.catalog__card {
-  margin: 0 24px 50px;
-}
+// .catalog__card {
+//   // margin: 0 24px 50px;
+// }

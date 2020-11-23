@@ -2,8 +2,7 @@
 @import "blockStyles/mixins";
 
 .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   width: 200px;
   height: 403px;
   border: 1px solid #f3f3f3;
@@ -11,7 +10,7 @@
   padding: 14px;
 
   &__img {
-    margin: 0 auto 38px;
+    margin: 0 auto 37px;
 
     padding-top: 13px;
     border: 3px solid transparent;
@@ -37,18 +36,20 @@
   }
 
   &__rate {
-    display: flex;
+    display: grid;
+    grid-template-areas: "rate rate";
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   &__feedbacks {
     @include smallText;
-    align-self: center;
+    // align-self: center;
   }
 
   &__price-block {
-    display: flex;
+    display: grid;
+    grid-template-areas: "price price";
     justify-content: space-between;
     margin-bottom: 20px;
   }
@@ -91,7 +92,8 @@
 }
 
 .stars {
-  display: flex;
+  display: grid;
+  grid-template-areas: "star star star star star star";
 
   &__item {
     background-image: url(../images/star.svg);

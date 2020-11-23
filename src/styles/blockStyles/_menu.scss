@@ -1,10 +1,13 @@
 @import "blockStyles/variables";
 
 .menu {
-  display: flex;
+  display: grid;
+  grid-template-columns: 90px, 1fr;
+  grid-template-rows: 60px;
+  grid-template-areas: "icon navigation";
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  margin: 0 50px;
 
   &__icon {
     width: $iconSize;
@@ -12,14 +15,11 @@
   }
 
   &__list {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    height: 60px;
-  }
+    display: grid;
+    gap: 20px;
+    grid-template-areas: "nav nav nav nav nav nav nav nav";
 
-  &__button {
-    margin-left: 20px;
+    list-style-type: none;
   }
 
   &__button:first-child {
