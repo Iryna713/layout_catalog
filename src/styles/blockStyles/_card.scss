@@ -2,14 +2,8 @@
 @import "blockStyles/mixins";
 
 .card {
-  display: grid;
-  grid-template-areas: "image"
-    "name"
-    "code"
-    "rating"
-    "price"
-    "button";
-  grid-template-rows: 195px 35px 28px 35px 19px 80px;
+  display: flex;
+  flex-direction: column;
   width: 200px;
   height: 403px;
   border: 1px solid #f3f3f3;
@@ -17,13 +11,7 @@
   padding: 14px;
 
   &__img {
-    display: grid;
-    // align-items: center;
-    justify-content: center;
-    width: 170px;
-    height: 164px;
-
-    margin: 0 auto;
+    margin: 0 auto 38px;
 
     padding-top: 13px;
     border: 3px solid transparent;
@@ -40,27 +28,29 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
+    margin-bottom: 5px;
   }
 
   &__code {
     @include smallText;
+    margin-bottom: 15px;
   }
 
   &__rate {
-    display: grid;
-    grid-template-areas: "rate rate";
+    display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
 
   &__feedbacks {
     @include smallText;
-    align-self: baseline;
+    align-self: center;
   }
 
   &__price-block {
-    display: grid;
-    grid-template-areas: "price price";
+    display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
   }
 
   &__price {
@@ -77,7 +67,6 @@
   }
 
   &__buy {
-    grid-area: button;
     align-self: center;
     background-color: $mainColor;
     border: 1px solid transparent;
@@ -102,8 +91,7 @@
 }
 
 .stars {
-  display: grid;
-  grid-template-areas: "star star star star star star";
+  display: flex;
 
   &__item {
     background-image: url(../images/star.svg);

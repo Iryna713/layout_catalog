@@ -1,5 +1,5 @@
 .main {
-  display: grid;
+  display: flex;
   justify-content: center;
 }
 
@@ -7,15 +7,17 @@
   margin-top: 50px;
 }
 
-.main__content {
-  display: grid;
-  grid-template-areas: "card card card card"
-    "card card card card";
-  grid-template-columns: repeat(4, 200px);
-  column-gap: 48px;
-  row-gap: 50px;
-}
-
 .page__menu {
   position: relative;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-auto-rows: 403px;
+  gap: 50px 48px;
+
+  justify-content: center;
+
+  width: 1024px;
 }
