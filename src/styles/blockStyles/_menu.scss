@@ -1,7 +1,9 @@
 @import "blockStyles/variables";
 
 .menu {
-  display: flex;
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-areas: "icon navigation";
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
@@ -12,14 +14,11 @@
   }
 
   &__list {
-    display: flex;
+    display: grid;
+    gap: 0 20px;
+    grid-template-columns: repeat(8, max-content);
     align-items: center;
     list-style-type: none;
-    height: 60px;
-  }
-
-  &__button {
-    margin-left: 20px;
   }
 
   &__button:first-child {
@@ -35,6 +34,7 @@
     line-height: 60px;
     position: relative;
     text-transform: uppercase;
+    transition: 1s;
   }
 
   &__link:hover,
