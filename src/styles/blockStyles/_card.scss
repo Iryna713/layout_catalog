@@ -4,8 +4,8 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 403px;
+  width: $cardWidth;
+  height: $cardHeigth;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 14px;
@@ -19,7 +19,7 @@
     transition: transform 1s;
   }
 
-  &__img-hover:hover {
+  &__img:hover {
     border-color: #f3f3f3;
     transform: scale(1.2);
   }
